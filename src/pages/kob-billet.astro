@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ticketPrices } from '../data/site.js';
+---
+
+<Layout title="Høst Møn | Køb billet">
+  <section class="section">
+    <div class="container ticket-wrap paper-card">
+      <h1 class="buy-title">Køb Billet</h1>
+
+      <div class="prices-grid">
+        {ticketPrices.map((ticket) => (
+          <div class="price-row">
+            <div class="price-label">{ticket.label}:</div>
+            <div class="price-value">{ticket.price}</div>
+          </div>
+        ))}
+      </div>
+
+      <div class="buy-cta">
+        <a href="#" class="cta-sticker">Gå til køb</a>
+      </div>
+    </div>
+  </section>
+</Layout>

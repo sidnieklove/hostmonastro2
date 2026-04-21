@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { days } from '../data/site.js';
+---
+
+<Layout title="Høst Møn | Program">
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Se Program</h1>
+
+      <div class="program-days">
+        {days.map((day) => (
+          <article class="day-card">
+            <h2 class="day-title">{day.title}</h2>
+            <p class="day-date">{day.date}</p>
+
+            <ul class="artist-list">
+              {day.artists.map((artist) => <li>{artist}</li>)}
+            </ul>
+
+            <div class="gallery scrap" style="margin-top: 1rem;">
+              {day.images.map((image) => (
+                <img src={image} alt="Artist foto" loading="lazy" />
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

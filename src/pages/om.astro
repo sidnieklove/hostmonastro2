@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { metrics } from '../data/site.js';
+---
+
+<Layout title="Høst Møn | Om os">
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Om Høst Møn</h1>
+
+      <div class="metrics">
+        {metrics.map((item) => (
+          <article class="paper-card metric-card">
+            <p class="metric-number">{item.number}</p>
+            <p class="metric-label">{item.label}</p>
+            <div class="image-card" style="margin-top:1rem;">
+              <img src={item.image} alt={item.title} loading="lazy" />
+              <span>{item.title}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
