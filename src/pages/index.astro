@@ -2,28 +2,53 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Høst Møn | Forside">
-  <section class="section hero">
-    <div class="container hero-grid">
-      <div>
-        <h1 class="hero-title">Høst Møn</h1>
-        <p class="hero-sub">Rå musik. Blød sol. Fælles øjeblikke.</p>
-        <div class="hero-actions">
-          <a href="/program" class="btn btn-primary">Se program</a>
-          <a href="/kob-billet" class="btn btn-secondary">Køb billet</a>
-        </div>
+<Layout title="Høst Møn">
+  <section class="frontpage">
+    <header class="frontpage-header">
+      <a href="/" class="logo">Høst Møn</a>
+
+      <nav class="main-nav">
+        <a href="/program">Program</a>
+        <a href="/faellesskab">Fællesskab</a>
+        <a href="/om">Om os</a>
+        <a href="/kob-billet" class="ticket-btn">Køb Billet</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1 class="hero-title">Høst Møn</h1>
+
+      <p class="hero-tagline">
+        Rå musik. <span class="highlight">Blød sol.</span> Fælles øjeblikke.
+      </p>
+
+      <div class="hero-strip">
+        <img src="/images/hero-collage.jpg" alt="Festival collage" />
+        <img src="/images/hero-collage.jpg" alt="Festival collage" />
+        <img src="/images/hero-collage.jpg" alt="Festival collage" />
+        <img src="/images/hero-collage.jpg" alt="Festival collage" />
+        <img src="/images/hero-collage.jpg" alt="Festival collage" />
+      </div>
+
+      <div class="hero-buttons">
+        <a href="/program" class="paint-btn paint-btn-green">Se program</a>
+        <a href="/kob-billet" class="paint-btn paint-btn-purple">Køb billet</a>
+      </div>
+
+      <div class="lineup">
         <p>
-          En intim musikfestival med fokus på musik, natur og frivilligt fællesskab.
-          Designet er inspireret af scrapbook, papirtekstur og håndlavet energi.
+          Jenny Wilson. Selina Gin. Rigmor.<br />
+          School of X. Hurula.<br />
+          Sonja Hjort. Mavourneen.<br />
+          Luster. Viik.<br />
+          The Tremolo Beer Gut.
         </p>
       </div>
 
-      <div class="poster">
-        <div class="poster-strip">
-          <span class="kicker">Høst Møn 2026</span>
-          <p>Jenny Wilson. Selina Gin. Rigmor. School of X. Hurula.</p>
-        </div>
+      <div class="bottom-images">
+        <img src="/images/hay.jpg" alt="Festival på halmballer" class="bottom-large" />
+        <img src="/images/crowd-small.jpg" alt="Koncertpublikum" class="bottom-small" />
       </div>
-    </div>
+    </section>
   </section>
 </Layout>

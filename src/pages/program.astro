@@ -1,31 +1,71 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { days } from '../data/site.js';
 ---
 
-<Layout title="Høst Møn | Program">
-  <section class="section">
-    <div class="container">
-      <h1 class="section-title">Se Program</h1>
+<Layout title="Program | Høst Møn">
+  <section class="program-page">
+    <header class="frontpage-header">
+      <a href="/" class="logo">Høst Møn</a>
 
-      <div class="program-days">
-        {days.map((day) => (
-          <article class="day-card">
-            <h2 class="day-title">{day.title}</h2>
-            <p class="day-date">{day.date}</p>
+      <nav class="main-nav">
+        <a href="/program">Program</a>
+        <a href="/faellesskab">Fællesskab</a>
+        <a href="/om">Om os</a>
+        <a href="/kob-billet" class="ticket-btn">Køb Billet</a>
+      </nav>
+    </header>
 
-            <ul class="artist-list">
-              {day.artists.map((artist) => <li>{artist}</li>)}
-            </ul>
+    <section class="program-layout">
+      <aside class="program-side-image">
+        <img src="/images/program-side-left.jpg" alt="Festival stemning" />
+      </aside>
 
-            <div class="gallery scrap" style="margin-top: 1rem;">
-              {day.images.map((image) => (
-                <img src={image} alt="Artist foto" loading="lazy" />
-              ))}
+      <section class="program-content">
+        <h1 class="program-title">Se Program</h1>
+
+        <div class="program-grid">
+          <div class="program-text">
+            <div class="program-day">
+              <h2>Fredag 23. aug.</h2>
+              <ul>
+                <li>Jenny Wilson</li>
+                <li>Sonja Hjorth</li>
+                <li>Mavourneen</li>
+              </ul>
             </div>
-          </article>
-        ))}
-      </div>
-    </div>
+
+            <div class="program-day">
+              <h2>Lørdag 24. aug.</h2>
+              <ul>
+                <li>Luster</li>
+                <li>Viik</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="program-images">
+            <div class="program-image-card tape-left">
+              <img src="/images/program-jenny.jpg" alt="Jenny Wilson" />
+            </div>
+
+            <div class="program-image-card tape-right">
+              <img src="/images/program-sonja.jpg" alt="Sonja Hjorth" />
+            </div>
+
+            <div class="program-image-card tape-left">
+              <img src="/images/program-mavourneen.jpg" alt="Mavourneen" />
+            </div>
+
+            <div class="program-image-card tape-right">
+              <img src="/images/program-luster.jpg" alt="Luster" />
+            </div>
+
+            <div class="program-image-card tape-left">
+              <img src="/images/program-viik.jpg" alt="Viik" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
   </section>
 </Layout>
