@@ -1,17 +1,12 @@
----
-const currentPath = Astro.url.pathname;
-const isActive = (path) => currentPath === path;
----
-
 <header class="site-header">
-  <div class="container nav">
-    <a href="/" class="logo">Høst Møn</a>
+  <nav class="site-nav">
+    <a href="/" class="site-logo">Høst Møn</a>
 
-    <nav class="nav-links" aria-label="Hovedmenu">
-      <a href="/program" aria-current={isActive('/program') ? 'page' : undefined}>Program</a>
-      <a href="/faellesskab" aria-current={isActive('/faellesskab') ? 'page' : undefined}>Fællesskab</a>
-      <a href="/om" aria-current={isActive('/om') ? 'page' : undefined}>Om os</a>
-      <a href="/kob-billet" class="ticket-link" aria-current={isActive('/kob-billet') ? 'page' : undefined}>Køb Billet</a>
-    </nav>
-  </div>
+    <div class="site-nav__links">
+      <a href="/program">Program</a>
+      <a href="/faellesskab">Fællesskab</a>
+      <a href="/om">Om os</a>
+      <a href="/kob-billet" class="site-nav__btn">Køb Billet</a>
+    </div>
+  </nav>
 </header>

@@ -1,25 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { ticketPrices } from '../data/site.js';
 ---
 
-<Layout title="Høst Møn | Køb billet">
-  <section class="section">
-    <div class="container ticket-wrap paper-card">
-      <h1 class="buy-title">Køb Billet</h1>
+<Layout title="Køb Billet | Høst Møn">
+  <section class="ticket-page">
+    <header class="frontpage-header">
+      <a href="/" class="logo">Høst Møn</a>
 
-      <div class="prices-grid">
-        {ticketPrices.map((ticket) => (
-          <div class="price-row">
-            <div class="price-label">{ticket.label}:</div>
-            <div class="price-value">{ticket.price}</div>
-          </div>
-        ))}
+      <nav class="main-nav">
+        <a href="/program">Program</a>
+        <a href="/faellesskab">Fællesskab</a>
+        <a href="/om">Om os</a>
+        <a href="/kob-billet" class="ticket-btn">Køb Billet</a>
+      </nav>
+    </header>
+
+    <section class="ticket-content">
+      <h1 class="ticket-title">Køb Billet</h1>
+
+      <div class="ticket-prices">
+        <div class="ticket-row">
+          <span class="ticket-row__label">Partoutbillet:</span>
+          <span class="ticket-row__price">1,095,-</span>
+        </div>
+
+        <div class="ticket-row">
+          <span class="ticket-row__label">Fredag:</span>
+          <span class="ticket-row__price">550,-</span>
+        </div>
+
+        <div class="ticket-row">
+          <span class="ticket-row__label">Lørdag:</span>
+          <span class="ticket-row__price">620,-</span>
+        </div>
       </div>
 
-      <div class="buy-cta">
-        <a href="#" class="cta-sticker">Gå til køb</a>
+      <div class="ticket-cta-wrap">
+        <a href="#" class="ticket-cta">Gå til køb</a>
       </div>
-    </div>
+    </section>
   </section>
 </Layout>

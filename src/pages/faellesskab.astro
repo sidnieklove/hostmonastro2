@@ -2,34 +2,77 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Høst Møn | Fællesskab">
-  <section class="section">
-    <div class="container feature-grid">
-      <div class="text-block paper-card">
+<Layout title="Fællesskab | Høst Møn">
+  <section class="community-page">
+    <header class="frontpage-header">
+      <a href="/" class="logo">Høst Møn</a>
+
+      <nav class="main-nav">
+        <a href="/program">Program</a>
+        <a href="/faellesskab">Fællesskab</a>
+        <a href="/om">Om os</a>
+        <a href="/kob-billet" class="ticket-btn">Køb Billet</a>
+      </nav>
+    </header>
+
+    <section class="community-layout">
+      <div class="community-text">
         <p>
-          Vi skal bruge en masse hjælp til at lave festival et helt nyt sted. Alle på festivalen
-          arbejder frivilligt, og vi synes, at vi har en drøm om et fællesskab. Der er mange
-          gengangere fra år til år, og flere af arrangørerne havde deres debut på festivalen
-          som frivillige i afviklingen.
+          Vi skal bruge en masse hjælp til at lave festival af et helt nyt sted.
+          Alle på festivalen arbejder frivilligt, og vi synes, at vi har en drøm
+          af et fællesskab. Der er mange arrangører fra år og år, og flere af
+          arrangørerne havde deres debut på festivalen som frivillige i afviklingen.
         </p>
+
         <p>
-          Vi håber på at se en masse kendte ansigter, men vi har i den grad også plads til nye
-          venner med stærke arme, hurtige hoveder og varme hjerter, så tøv ikke med at melde dig til.
-          Billetpriserne er også steget, så der er kun gode grunde.
+          Vi håber på at se en masse kendte ansigter, men vi har igen brug for
+          nye venner med stærke arme, hurtige hoveder og varme hjerter, så vi
+          kan blive ved med at møde dig til. Billetpriserne er også steget, så
+          der er kun gode grunde.
         </p>
+
         <p>
-          Vi har brug for hjælp i dagene før, under og efter festivalen. En tjans består af 2x6 timer,
-          og man får mad, gavekort til baren og festivalbillet retur. Vi holder også en frivilligfest.
+          Vi har brug for hjælp i dagene før, under og efter festivalen. En tjans
+          består af 2x6 timer, og man får mad, gavekort til baren og festivalbillet
+          retur. Vi holder også en frivilligfest en gang om året, ligesom man får
+          adgang til Impact Festival 2026.
         </p>
+
         <p>
-          Skriv en mail til <strong>frivillig@hostmoen.dk</strong>, hvis du er interesseret i at være med.
+          Samtidig er det vigtigt, at man er bevidst om, at det stadigvæk er et
+          arbejde, og at vi forventer en dedikeret indsats i festivalens ånd.
+          Festivalen kan slet ikke lade sig gøre uden frivillige, så man påtager
+          sig et stort ansvar, men til gengæld får man uendeligt gode tider igen.
+        </p>
+
+        <p>
+          Skriv en mail til
+          <a href="mailto:frivillig@hostmoen.dk">frivillig@hostmoen.dk</a>,
+          hvis du er interesseret i at være med til at sætte dit præg på festivalen.
         </p>
       </div>
 
-      <div class="paper-card" style="display:grid; align-content:end; gap:1rem; min-height: 420px;">
-        <h1 class="volunteer-title">Bliv frivillig<br />helt frivillig</h1>
-        <div class="scribble" aria-hidden="true"></div>
+      <div class="community-visual">
+        <div class="community-image-card tape-left">
+          <img src="/images/hay.jpg" alt="Festivalgæster på halmballer" />
+        </div>
+
+        <div class="community-image-card community-image-card--lower tape-right">
+          <img src="/images/hay.jpg" alt="Festivalgæster på halmballer" />
+        </div>
+
+        <div class="community-title-wrap">
+          <h1 class="community-title">
+            Bliv frivillig<br />
+            helt frivillig
+          </h1>
+
+          <div class="community-scribble">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   </section>
 </Layout>

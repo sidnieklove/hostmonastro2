@@ -1,25 +1,59 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { metrics } from '../data/site.js';
 ---
 
-<Layout title="Høst Møn | Om os">
-  <section class="section">
-    <div class="container">
-      <h1 class="section-title">Om Høst Møn</h1>
+<Layout title="Om Høst Møn">
+  <section class="about-page">
+    <header class="frontpage-header">
+      <a href="/" class="logo">Høst Møn</a>
 
-      <div class="metrics">
-        {metrics.map((item) => (
-          <article class="paper-card metric-card">
-            <p class="metric-number">{item.number}</p>
-            <p class="metric-label">{item.label}</p>
-            <div class="image-card" style="margin-top:1rem;">
-              <img src={item.image} alt={item.title} loading="lazy" />
-              <span>{item.title}</span>
-            </div>
-          </article>
-        ))}
+      <nav class="main-nav">
+        <a href="/program">Program</a>
+        <a href="/faellesskab">Fællesskab</a>
+        <a href="/om">Om os</a>
+        <a href="/kob-billet" class="ticket-btn">Køb Billet</a>
+      </nav>
+    </header>
+
+    <section class="about-layout">
+      <h1 class="about-title">Om Høst Møn</h1>
+
+      <div class="about-hero-image tape-left">
+        <img src="/images/about-hero.jpg" alt="Festivalpublikum ved Høst Møn" />
       </div>
-    </div>
+
+      <section class="about-stats">
+        <div class="about-stat">
+          <span class="about-stat__number">8</span>
+          <span class="about-stat__label">Koncerter</span>
+        </div>
+
+        <div class="about-stat">
+          <span class="about-stat__number">3</span>
+          <span class="about-stat__label">Dage</span>
+        </div>
+
+        <div class="about-stat about-stat--icon">
+          <span class="about-infinity">∞</span>
+        </div>
+      </section>
+
+      <section class="about-cards">
+        <article class="about-card tape-left">
+          <img src="/images/hay.jpg" alt="Festivalstemning" />
+          <h2>Oplevelsen</h2>
+        </article>
+
+        <article class="about-card tape-right">
+          <img src="/images/hay.jpg" alt="Festivalprofil" />
+          <h2>Musikprofil</h2>
+        </article>
+
+        <article class="about-card tape-left">
+          <img src="/images/about-hero.jpg" alt="Lokation" />
+          <h2>Lokation</h2>
+        </article>
+      </section>
+    </section>
   </section>
 </Layout>
